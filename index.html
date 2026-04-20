@@ -1,34 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="index.js"></script>
-
-    <title>Biblioteca Pokemon</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Mini Pokédex</title>
 </head>
+
 <body>
-    
-<header>
-    <h2>Catálogo de pokemones</h2>
-    <h3>Buscar</h3>
-</header>
-<main>
 
-<div>
-<h3>Nombre:</h3>
-<ul>
-    <li>Tipo</li>
-    <li>Peso</li>
-    <li>Altura</li>
-</ul>
-</div>
+    <div class="pokedex">
+        <header>
+            <h1>Catálogo Pokémon</h1>
+            <p>Buscá un Pokémon por nombre o número</p>
+        </header>
 
+        <div class="search-area">
+            <input type="text" id="input-pokemon" placeholder="ej: pikachu, 25..." />
+            <button id="btn-buscar">Buscar</button>
+        </div>
 
+        <div class="loading" id="loading">Buscando Pokémon...</div>
+        <div class="error-msg" id="error-msg"></div>
 
-</main>
+        <div class="card" id="card">
+            <div class="card-top">
+                <img id="poke-img" src="" alt="Imagen del Pokémon" />
+                <div>
+                    <div id="poke-nombre" class="card-name"></div>
+                    <div id="poke-id" class="card-id"></div>
+                    <div id="poke-tipos" class="types"></div>
+                </div>
+            </div>
+            <div class="card-stats">
+                <div class="stat">
+                    <div class="stat-label">Altura</div>
+                    <div id="poke-altura" class="stat-value"></div>
+                </div>
+                <div class="stat">
+                    <div class="stat-label">Peso</div>
+                    <span id="poke-peso" class="stat-value"></span>
+                </div>
+            </div>
+        </div>
+    </div>
 
-
+    <script src="script.js"></script>
 </body>
-</html>
 
+</html>
